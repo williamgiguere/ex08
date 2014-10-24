@@ -1,0 +1,5 @@
+ex06
+
+?/20
+
+SVPL utilisez le dossier lib  (voir mon exemple: https://github.com/dzenanr/two_files)
