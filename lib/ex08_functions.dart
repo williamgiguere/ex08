@@ -102,6 +102,24 @@ removeMember(newMember member, List memberlist) {
 }
 
 //Function to edit members :
+editMember(newMember memberBefore, newMember memberAfter, List memberlist) {
+
+  memberlist.removeWhere((m) => m['associationName'] == memberBefore.associationName && 
+      m['firstName'] == memberBefore.firstName &&
+      m['lastName'] == memberBefore.lastName &&
+      m['email'] == memberBefore.email);
+  
+  memberlist.add({
+    "associationName": memberAfter.associationName,
+    "firstName": memberAfter.firstName,
+    "lastName": memberAfter.lastName,
+    "email": memberAfter.email});
+  
+  for (var y in memberlist) {
+    print (y);
+  }
+  return '';
+}
 
 
 

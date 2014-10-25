@@ -25,12 +25,19 @@ main() {
 //Main for # 2
   //Using the same list (members) as #1 and a new member named 'John'
   var john = new newMember('1', 'John', 'Doe', 'jd@gmail.com');
+  var memberBefore = new newMember('1', 'Bob', 'Dart', 'bd@gmail.com');
+  var memberAfter = new newMember('2', 'Bob', 'Dart', 'bd@gmail.com');
   
   print("------------EX08-2-------------");
   print("Part #1 :\nAdding a new member (JOHN):");
   print ('${addMember(john, members)}');
-  print("\nPart #2 :\nRemoving a new member (JOHN):");
+  print("\nPart #2 :\nRemoving a member (JOHN):");
   print ('${removeMember(john, members)}');
+  print("\nPart #3 :\nEditing a member (Switching Bob's team to #2) :");
+  print ('${editMember(memberBefore, memberAfter, members)}');
+
+
 }
+
 
 
