@@ -1,5 +1,56 @@
-ex06
+ex08
 
-?/20
+6/20
 
-SVPL utilisez le dossier lib  (voir mon exemple: https://github.com/dzenanr/two_files)
+-4
+4 jours en retard: 25/10/2014
+
+-1
+la bibliothèque (library) doit être dans le répertoire lib
+library ex08;
+
+-1
+part '../lib/functions.dart';
+utiliser le nom du paquet (package) et non une position relative
+
+8.1
+-1
+sortByLastName(List members, association) {
+-->
+sortByLastName(List members, String association) {
+
+-1
+  var members = [
+   {'associationName': '1', 'firstName': 'Bob', 'lastName': 'Dart', 'email': 'bd@gmail.com'},
+   {'associationName': '1', 'firstName': 'Joe', 'lastName': 'Java', 'email': 'jm@gmail.com'},
+   {'associationName': '2', 'firstName': 'Charles', 'lastName': 'Dart', 'email': 'cd@gmail.com'},
+   {'associationName': '2', 'firstName': 'Steve', 'lastName': 'Jobs', 'email': 'cd@gmail.com'}
+   ];
+--> 
+associations = [
+  {“name”: “IS”, “description”: “Information Systems”, “members”: 
+   [{“firstName”: “Dzenan”, “lastName”: “Ridjanovic”, “email”: “dr@gmail.com”},
+    {“firstName”: “Robert”, “lastName”: “Nelson”, “email”: “rn@gmail.com”}]},
+  {“name”: “CS”, “description”: “Computer Science”,  “members”: 
+   [{“firstName”: “David”, “lastName”: “Curtis”, “email”: “dc@gmail.com”}]}
+]
+
+Sort the list of members of a given association first by the last name, 
+THEN by the first name.
+-1 THEN
+
+8.2
+-1
+class newMember {
+-->
+class Member {
+
+-1
+The same member may belong to different associations
+class newMember {
+  var associationName;
+  
+-3  
+pas un modèle de classe
+
+
