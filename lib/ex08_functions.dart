@@ -1,4 +1,4 @@
-part of ex08;
+library ex08;
 
 
 /*1.Create a list of associations of members, where a member is represented as a map 
@@ -15,7 +15,7 @@ associations = [
 */
 //Part 1 
 
-sortByLastName(List members, association) {
+sortByLastName(List members, String association) {
   List sortMembers = new List();
   
   for (var x in members) {
@@ -47,82 +47,4 @@ lastNameStartsWith(List members, String letter) {
   return '';  
 
 }
-
-/*2.Create a class model with associations and members. The same member may belong to 
-different associations. Provide the maintenance of the model by providing additions, 
-removals and updates of entities. 
-
-From scratch:
-https://github.com/dzenanr/association
-With dartlero:
-https://github.com/dzenanr/association_members
-*/
-
-
-
-//new class :
-class newMember {
-  var associationName;
-  var firstName;
-  var lastName;
-  var email;
-
-  newMember(this.associationName, this.firstName, this.lastName, this.email); 
-}
-
-
-//Function to add members : 
-addMember(newMember member, List memberlist) {
-
-  memberlist.add({
-    "associationName": member.associationName,
-    "firstName": member.firstName,
-    "lastName": member.lastName,
-    "email": member.email});
-  
-  for (var y in memberlist) {
-    print (y);
-  }
-  return '';
-}
-
-
-//Function to remove members :
-removeMember(newMember member, List memberlist) {
-  
-  memberlist.removeWhere((m) => m['associationName'] == member.associationName && 
-    m['firstName'] == member.firstName &&
-    m['lastName'] == member.lastName &&
-    m['email'] == member.email);
-  
-  for (var y in memberlist) {
-    print (y);
-  }
-  return '';
-}
-
-//Function to edit members :
-editMember(newMember memberBefore, newMember memberAfter, List memberlist) {
-
-  memberlist.removeWhere((m) => m['associationName'] == memberBefore.associationName && 
-      m['firstName'] == memberBefore.firstName &&
-      m['lastName'] == memberBefore.lastName &&
-      m['email'] == memberBefore.email);
-  
-  memberlist.add({
-    "associationName": memberAfter.associationName,
-    "firstName": memberAfter.firstName,
-    "lastName": memberAfter.lastName,
-    "email": memberAfter.email});
-  
-  for (var y in memberlist) {
-    print (y);
-  }
-  return '';
-}
-
-
-
-
-
 

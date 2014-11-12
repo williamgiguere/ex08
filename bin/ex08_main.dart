@@ -1,7 +1,5 @@
-library ex08;
-
-part '../lib/ex08_functions.dart';
-
+import 'package:ex08/ex08_functions.dart';
+import 'package:ex08/ex08_class_model.dart';
 
 main() {
   
@@ -24,19 +22,29 @@ main() {
 
 //Main for # 2
   //Using the same list (members) as #1 and a new member named 'John'
-  var john = new newMember('1', 'John', 'Doe', 'jd@gmail.com');
-  var memberBefore = new newMember('1', 'Bob', 'Dart', 'bd@gmail.com');
-  var memberAfter = new newMember('2', 'Bob', 'Dart', 'bd@gmail.com');
+  var association1 = new association('Association n.1', 'This is the first association',[]);
+  
+  var john = new member('John', 'Doe', 'jd@gmail.com');
+  var bob = new member('Bob', 'Doe', 'bd@gmail.com');
+  var jane = new member('Jane', 'Doe', 'janedoe@gmail.com');
+  var suzy = new member('Suzy', 'Doe', 'sd@gmail.com');
+  
   
   print("------------EX08-2-------------");
-  print("Part #1 :\nAdding a new member (JOHN):");
-  print ('${addMember(john, members)}');
+  print("Part #1 :\nAdding new members (JOHN, BOB, JANE & SUZY):");
+  association1.addMember(john);
+  association1.addMember(bob);
+  association1.addMember(jane);
+  association1.addMember(suzy);
+  print ('$association1');
+  
   print("\nPart #2 :\nRemoving a member (JOHN):");
-  print ('${removeMember(john, members)}');
-  print("\nPart #3 :\nEditing a member (Switching Bob's team to #2) :");
-  print ('${editMember(memberBefore, memberAfter, members)}');
-
-
+  association1.removeMember(john);
+  print ('$association1');
+  
+  print("\nPart #3 :\nEditing a member (switching john's email to :johndoe@gmail.com :");
+  john.editEmail('johndoe@gmail.com');
+  print ('$john');  
 }
 
 
