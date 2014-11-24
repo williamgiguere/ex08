@@ -1,5 +1,37 @@
 ex08
 
+17/20
+
+8.1
+-1
+  var members = [
+   {'associationName': '1', 'firstName': 'Bob', 'lastName': 'Dart', 'email': 'bd@gmail.com'},
+   {'associationName': '1', 'firstName': 'Joe', 'lastName': 'Java', 'email': 'jm@gmail.com'},
+   {'associationName': '2', 'firstName': 'Charles', 'lastName': 'Dart', 'email': 'cd@gmail.com'},
+   {'associationName': '2', 'firstName': 'Steve', 'lastName': 'Jobs', 'email': 'cd@gmail.com'}
+   ];
+--> 
+associations = [
+  {“name”: “IS”, “description”: “Information Systems”, “members”: 
+   [{“firstName”: “Dzenan”, “lastName”: “Ridjanovic”, “email”: “dr@gmail.com”},
+    {“firstName”: “Robert”, “lastName”: “Nelson”, “email”: “rn@gmail.com”}]},
+  {“name”: “CS”, “description”: “Computer Science”,  “members”: 
+   [{“firstName”: “David”, “lastName”: “Curtis”, “email”: “dc@gmail.com”}]}
+]
+
+8.2
+
+-1
+class association {
+-->
+class Association {
+
+-1
+Association
+  remove?
+
+---
+
 6/20
 
 -4
